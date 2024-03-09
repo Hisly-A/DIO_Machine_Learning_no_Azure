@@ -1,2 +1,2 @@
-# DIO_Machine_Learning_no_Azure
+# Machine Learning no Azure
 Trabalhando com Machine Learning na Prática no Azure ML
