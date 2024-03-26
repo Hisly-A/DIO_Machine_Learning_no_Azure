@@ -7,12 +7,21 @@ Trabalhando com Machine Learning na Prática no Azure ML
 
 <sub>Fonte: <https://learn.microsoft.com/pt-br/azure/machine-learning/overview-what-is-azure-machine-learning?view=azureml-api-2></sub>
 
-
-## Criando o espaço de trabalho no Azure Machine Learning
+## Criação do espaço de trabalho no Azure Machine Learning
 
 Realize o cadastro em https://azure.microsoft.com/pt-br/ e depois acesse o Azure em "https://portal.azure.com".
 
-Selecione **+ Create Resource**, pesquise por **"*Machine Learning*"** e clique em **Create** para criar novo recurso do Azure Machine Learning com as seguintes configurações:
+Selecione **+ Create Resource**, pesquise por **"*Machine Learning*"**:
+
+<div align="center">
+    <img width="595" title="ML01" src="https://github.com/Hisly-A/DIO_Machine_Learning_no_Azure/blob/main/images/ML01.png"/>
+</div>
+
+Clique em **Create** para criar novo recurso do Azure Machine Learning com as seguintes configurações:
+
+<div align="center">
+    <img width="595" title="ML02" src="https://github.com/Hisly-A/DIO_Machine_Learning_no_Azure/blob/main/images/ML02.PNG"/>
+</div>
 
 - **Subscription:** sua assinatura do Azure.
 
@@ -30,16 +39,49 @@ Selecione **+ Create Resource**, pesquise por **"*Machine Learning*"** e clique 
 
 - **Container registry:** deixar na opção "None".
 
-Clique em **Review + Create** revise os dados e clique em **Create**. Aguarde a criação do seu espaço de trabalho (pode demorar alguns minutos) e, em seguida, clique em **Go to resource** ou na "Home" do Azure, escolha o "Workspace" criado na etapa de "Preparação de Ambiente"
+<div align="center">
+    <img width="595" title="ML03" src="https://github.com/Hisly-A/DIO_Machine_Learning_no_Azure/blob/main/images/ML03.PNG"/>
+</div> 
+<br>
+<div align="center">
+    <img width="595" title="ML04" src="https://github.com/Hisly-A/DIO_Machine_Learning_no_Azure/blob/main/images/ML04.PNG"/>
+</div>
+
+Clique em **Review + Create** revise os dados e clique em **Create**. Aguarde a criação do seu espaço de trabalho (pode demorar alguns minutos) e, em seguida, clique em **Go to resource** ou na "Home" do Azure, escolha o "Workspace" criado na etapa de "Preparação de Ambiente":
+
+<div align="center">
+    <img width="595" title="ML05" src="https://github.com/Hisly-A/DIO_Machine_Learning_no_Azure/blob/main/images/ML05.PNG"/>
+</div> 
+<br>
+<div align="center">
+    <img width="595" title="ML06" src="https://github.com/Hisly-A/DIO_Machine_Learning_no_Azure/blob/main/images/ML06.PNG"/>
+</div>
+<br>
+<div align="center">
+    <img width="595" title="ML07" src="https://github.com/Hisly-A/DIO_Machine_Learning_no_Azure/blob/main/images/ML07.PNG"/>
+</div>
 
 Na página do Workspace escolhido, clicar em **Launch Studio** para ser redirecionado à página https://ml.azure.com. Pode ser necessário fazer o login novamente.
 
+<div align="center">
+    <img width="595" title="ML08" src="https://github.com/Hisly-A/DIO_Machine_Learning_no_Azure/blob/main/images/ML08.PNG"/>
+</div>
 
 ## Criação do Automated ML no Machine Learning Studio
 
 No Azure Machine Learning Studio(https://ml.azure.com), acessar **Automated ML**.
 
-Clicar em **+ New Automated ML job** para criar um novo trabalho de ML automatizado com as seguintes configurações:
+<div align="center">
+    <img width="595" title="ML09" src="https://github.com/Hisly-A/DIO_Machine_Learning_no_Azure/blob/main/images/ML09.PNG"/>
+</div>
+
+Clicar em **+ New Automated ML job** para criar um novo trabalho de ML automatizado:
+
+<div align="center">
+    <img width="595" title="ML10" src="https://github.com/Hisly-A/DIO_Machine_Learning_no_Azure/blob/main/images/ML10.PNG"/>
+</div>
+
+Com as seguintes configurações:
 
 **Basic settings:** 
 
@@ -51,45 +93,79 @@ Clicar em **+ New Automated ML job** para criar um novo trabalho de ML automatiz
 
 - **Tags:** nenhuma
 
+<div align="center">
+
+![ML11](https://github.com/Hisly-A/DIO_Machine_Learning_no_Azure/blob/main/images/ML11.PNG)
+
+</div>
+
 **Task type & Data:**
 
 - **Task type:** Regressão
+
+<div align="center">
+
+![ML12](https://github.com/Hisly-A/DIO_Machine_Learning_no_Azure/blob/main/images/ML12.PNG)
+
+</div>
 
 - **Select data:** crie um novo conjunto de dados com as seguintes configurações:
 
  - **Data type:** 
 
-  - **Name:** bike-rental (sem espaços)
+   - **Name:** bike-rental (sem espaços)
 
-  - **Description:** colocar uma descrição sobre os dados
+   - **Description:** colocar uma descrição sobre os dados
 
-  - **Type:** Tabular
+   - **Type:** Tabular
+
+<div align="center">
+
+![ML13](https://github.com/Hisly-A/DIO_Machine_Learning_no_Azure/blob/main/images/ML13.PNG)
+
+</div>
 
  - **Data Source:**
 
-  - Selecione **From Web Files**
+    - Selecione **From Web Files**
+
+<div align="center">
+
+![ML14](https://github.com/Hisly-A/DIO_Machine_Learning_no_Azure/blob/main/images/ML14.PNG)
+
+</div>
 
  - **Web URL:**
 
-  - **Web URL:** https://aka.ms/bike-rentals
+    - **Web URL:** https://aka.ms/bike-rentals
 
-  - **Skip data validation:** não selecionar
+    - **Skip data validation:** não selecionar
+
+<div align="center">
+
+![ML15](https://github.com/Hisly-A/DIO_Machine_Learning_no_Azure/blob/main/images/ML15.PNG)
+
+</div>
 
  - **Settings:**
 
-  - **File Format:** Delimited
+    - **File Format:** Delimited
 
-  - **Delimiter:** Comma
+    - **Delimiter:** Comma
 
-  - **Encoding:** UTF-8
+    - **Encoding:** UTF-8
 
-  - **Column headers:** Only First file has headers
+    - **Column headers:** Only First file has headers
 
-  - **Skip rows:** None
+    - **Skip rows:** None
 
-  - **Dataset contains multi-line data:**  deixar desmarcado
+    - **Dataset contains multi-line data:**  deixar desmarcado
 
-  - Clique em **Next**
+<div align="center">
+
+![ML16](https://github.com/Hisly-A/DIO_Machine_Learning_no_Azure/blob/main/images/ML16.PNG)
+
+</div>
 
  - **Schema**
 
@@ -99,13 +175,31 @@ Clicar em **+ New Automated ML job** para criar um novo trabalho de ML automatiz
 
   - Clicar em **Next**
 
+<div align="center">
+
+
+
+</div>
+
  - **Review:** Revisar os dados preenchidos nas páginas anteriores
 
  - Clicar em **Create**
 
+<div align="center">
+
+![ML16](https://github.com/Hisly-A/DIO_Machine_Learning_no_Azure/blob/main/images/ML16.PNG)
+
+</div>
+
 - **Task type & Data:** Selecionar o conjunto de dados que acabamos de criar: bike-rentals
 
 - Clicar em **Next**
+
+<div align="center">
+
+![ML17](https://github.com/Hisly-A/DIO_Machine_Learning_no_Azure/blob/main/images/ML17.PNG)
+
+</div>
 
 - **Task Settings**
 
@@ -113,6 +207,11 @@ Clicar em **+ New Automated ML job** para criar um novo trabalho de ML automatiz
 
  - Clicar em **View Aditional configuration settings** e preencher conforme imagem abaixo:
 
+<div align="center">
+
+ ![ML18](https://github.com/Hisly-A/DIO_Machine_Learning_no_Azure/blob/main/images/ML18.PNG)
+
+</div>
 
 - **Limits**
 
@@ -137,6 +236,14 @@ Clicar em **+ New Automated ML job** para criar um novo trabalho de ML automatiz
 - **Percentage validation of data:** 10
 
 - **Test data:** Nenhum
+
+<div align="center">
+
+![ML19](https://github.com/Hisly-A/DIO_Machine_Learning_no_Azure/blob/main/images/ML19.PNG)
+
+![ML20](https://github.com/Hisly-A/DIO_Machine_Learning_no_Azure/blob/main/images/ML20.PNG) 
+
+</div>
 
 - - **Compute:**
 
